@@ -47,4 +47,8 @@ export class RecipeService {
     // used spread operator to copy object properties
     return { ...this.recipes.find((recipe) => recipe.id === id) };
   }
+
+  deleteRecipe(id){
+    this.recipes = this.recipes.filter( recipe => recipe.id !== id );
+  }
 }
